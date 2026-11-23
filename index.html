@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4f2ed" />
+  <meta name="description" content="FinalLap — The weekly online car auction event." />
+  <title>FinalLap — The Auction Show</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="FinalLap home">Final<span>Lap</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#auctions">Auctions</a><a href="#cars">Cars</a><a href="#how-it-works">How FinalLap Works</a><a href="#about">About Us</a>
+    </nav>
+    <div class="header-actions">
+      <a class="button button-dark button-small" href="#sell">Sell a Car</a>
+      <a class="login-link" href="#login">Log in</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="auctions">
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=88" alt="Sports car on a scenic coastal road">
+        <div class="hero-copy">
+          <p class="eyebrow light">The online auction, reimagined</p>
+          <h1>The Weekly Online<br>Car Auction Event</h1>
+          <p class="hero-sub">Every Thursday at 1 PM ET, a curated live event brings our online car-loving community together. Discover, bid, and buy your next favorite car.</p>
+        </div>
+      </div>
+      <form class="notify-form" id="notify-form">
+        <label class="sr-only" for="phone">Phone number</label>
+        <input id="phone" type="tel" placeholder="+1 (555) 555-0194" required>
+        <label class="sr-only" for="interest">I'm here to...</label>
+        <select id="interest"><option>I'm here to...</option><option>Buy a car</option><option>Sell a car</option><option>Just looking</option></select>
+        <button class="button button-red" type="submit">Text Me</button>
+      </form>
+      <p class="form-note">We'll text you when each new live drop and auction goes live.<br>By tapping Text Me, you agree to receive recurring automated marketing text messages. Message and data rates may apply.</p>
+    </section>
+
+    <section class="brand-strip" aria-label="Featured makes">
+      <div class="brand-track">
+        <div class="brand-item"><span class="car-shape"></span><small>#1 Porsche 911</small></div>
+        <div class="brand-item"><span class="car-shape"></span><small>#2 Ferrari 458 Italia</small></div>
+        <div class="brand-item"><span class="car-shape"></span><small>#3 Porsche GT3</small></div>
+        <div class="brand-item featured"><b>Current Lot</b><span class="car-shape"></span><small>#4 Lamborghini Murciélago</small></div>
+        <div class="brand-item"><span class="car-shape"></span><small>#5 Lamborghini Huracán</small></div>
+        <div class="brand-item"><span class="car-shape"></span><small>#6 Ferrari 360 Spider</small></div>
+        <div class="brand-item"><span class="car-shape"></span><small>#7 Mercedes-Benz</small></div>
+        <div class="brand-item"><span class="car-shape"></span><small>#8 Aston Martin</small></div>
+      </div>
+    </section>
+
+    <section class="showcase section-shell">
+      <div class="showcase-image">
+        <img class="track-car track-car-left" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1100&q=85" alt="Red sports car">
+        <img class="track-car track-car-right" src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1000&q=85" alt="Blue performance car">
+        <div class="tire-marks" aria-hidden="true"></div>
+        <h2>The Auction Show<br><span>The Car World</span><br>Watches Together</h2>
+      </div>
+    </section>
+
+    <section class="steps section-shell" id="how-it-works">
+      <article class="step-row">
+        <div class="step-copy"><span class="step-number">01</span><h3>Browse the<br>cars all week.</h3><p>Every car gets a full listing: car photos, videos, history docs, seller Q&A. See them before you bid. The whole thing is designed around finding your next favorite car.</p></div>
+        <div class="step-visual listing-preview">
+          <div class="preview-top"><b>FinalLap</b><span>Cars　 Sell a car　 How it works</span></div>
+          <div class="preview-title">Cars <small>Browse all listings</small></div>
+          <div class="preview-grid">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=400&q=75" alt="Car listing">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=75" alt="Car listing">
+            <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=400&q=75" alt="Car listing">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=400&q=75" alt="Car listing">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=75" alt="Car listing">
+            <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=400&q=75" alt="Car listing">
+          </div>
+        </div>
+      </article>
+      <article class="step-row">
+        <div class="step-copy"><span class="step-number">02</span><h3>Tune in Thursdays<br>at 1PM ET to bid.</h3><p>This is what makes FinalLap different. Every car goes through the auction sequence, in front of everyone at once. The whole room's attention is concentrated on a single car at a time.</p></div>
+        <div class="step-visual visual-card"><div class="live-pill">LIVE AUCTION</div><div class="live-lines"><span></span><span></span><span></span></div><div class="live-bottom">THURSDAY · 1 PM ET</div></div>
+      </article>
+      <article class="step-row">
+        <div class="step-copy"><span class="step-number">03</span><h3>One car at a time,<br>until they're gone.</h3><p>Bidding opens as the clock starts. A little bit of tension, nothing gets skipped at the buzzer. When one ends, the next rolls in — a few minutes each, back to back.</p></div>
+        <div class="step-visual visual-card countdown-card"><div class="countdown-label">LOT #04 · CURRENT BID</div><strong>$48,500</strong><div class="bid-line"></div><div class="countdown-foot">00 : 02 : 18　　PLACE BID ↗</div></div>
+      </article>
+    </section>
+
+    <section class="team-section" id="about">
+      <div class="section-shell">
+        <p class="eyebrow">The people behind the paddock</p>
+        <h2>Who's behind this</h2>
+        <div class="team-grid">
+          <article class="team-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85" alt="Portrait of Marshall Haas"><h3>Marshall Haas</h3><p class="role">PRODUCT & MARKETING</p><p>Founder and lifelong car enthusiast. Marshall brings a product-first mindset to building a better way to discover and buy exceptional cars.</p></article>
+          <article class="team-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=85" alt="Portrait of Hazem Gdibah"><h3>Hazem Gdibah</h3><p class="role">MARKETPLACE STRATEGY</p><p>Focused on creating a thoughtful, trusted marketplace experience that makes every auction feel personal, exciting, and easy to follow.</p></article>
+          <article class="team-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=85" alt="Portrait of Courtney Guertin"><h3>Courtney Guertin</h3><p class="role">AUCTION & COMMUNITY</p><p>Bringing people together around great cars, Courtney helps make the FinalLap community feel like the best seat in the house on auction day.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section-shell" id="sell">
+      <h2>Give your car<br>the entire room</h2>
+      <div class="service-grid">
+        <article class="service-card dark-card"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=85" alt="Black sports car"><div><h3>Selling one car</h3><p>Five hundred eyes on the same event. Get in front of a new audience. We're creating the first FinalLap experience for sellers who want something more exciting, more social, and more connected.</p><a class="button button-red" href="mailto:hello@finallap.com">Talk to us about selling</a></div></article>
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=1000&q=85" alt="Luxury car interior"><div><h3>Dealers</h3><p>A chance to share what makes an every car you bring, plus preferred advertising in our online auctions. We're choosing a small group of founding partners before launch.</p><a class="button button-dark" href="mailto:hello@finallap.com">Become a founding partner</a></div></article>
+      </div>
+      <div class="cta-banner">
+        <div><h2>Thursdays at 1 PM ET.<br>Don't miss it.</h2><p>Get a reminder when the next auction goes live.</p><form class="notify-form banner-form"><input type="tel" aria-label="Phone number" placeholder="+1 (555) 555-0134"><select aria-label="Your interest"><option>I'm here to...</option><option>Buy a car</option><option>Sell a car</option></select><button class="button button-dark" type="button">Text Me</button></form><small>By tapping Text Me, you agree to receive recurring automated messages.</small></div>
+        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=85" alt="Blue sports car">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-logo" href="#top">FinalLap</a>
+    <nav><a href="#auctions">Auctions</a><a href="#cars">Cars</a><a href="#how-it-works">How FinalLap Works</a><a href="#about">About Us</a><a href="#sell">Sell a Car</a></nav>
+    <div class="socials"><a href="#instagram" aria-label="Instagram">◎</a><a href="#youtube" aria-label="YouTube">▶</a></div>
+    <p>© 2025 FinalLap, Inc. All rights reserved. FinalLap is a trademark of FinalLap, LLC.</p>
+  </footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
